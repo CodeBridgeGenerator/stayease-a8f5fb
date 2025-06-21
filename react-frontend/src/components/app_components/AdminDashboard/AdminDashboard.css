@@ -1,0 +1,31 @@
+.admin-dashboard-root {
+  font-family: 'Inter', Arial, sans-serif;
+}
+.admin-dashboard-header {
+  box-shadow: 0 2px 8px #e5e7ef;
+}
+.admin-card {
+  transition: box-shadow 0.2s;
+}
+.admin-card:hover {
+  box-shadow: 0 4px 16px #dbeafe;
+}
+table {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+th, td {
+  padding: 8px 10px;
+  text-align: left;
+}
+th {
+  background: #f7f8fd;
+  font-weight: 700;
+}
+tr {
+  border-bottom: 1px solid #e5e7ef;
+}
+tr:last-child {
+  border-bottom: none;
+} 

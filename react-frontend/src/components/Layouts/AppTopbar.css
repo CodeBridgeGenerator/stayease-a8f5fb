@@ -1,0 +1,218 @@
+@import '../../css/palette.css';
+/* Minimal topbar styles for StayEase */
+.lp-navbar {
+  width: 100%;
+  background: var(--white);
+  box-shadow: 0 2px 8px rgba(34,166,245,0.04);
+  position: relative;
+  z-index: 100;
+}
+.lp-navbar-inner {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 0 32px;
+}
+.lp-navbar-logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--dark-gray);
+}
+.lp-logo-icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  display: inline-block;
+}
+.lp-logo-text {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--dark-gray);
+  letter-spacing: -1px;
+}
+.lp-navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.lp-navbar-links li a {
+  color: var(--dark-gray);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.08rem;
+  transition: color 0.2s;
+  padding: 2px 0;
+}
+.lp-navbar-links li a:hover {
+  color: var(--primary-blue);
+}
+.lp-btn-signin {
+  background: var(--button-blue);
+  color: var(--white) !important;
+  border-radius: 8px;
+  padding: 8px 28px;
+  font-weight: 700;
+  font-size: 1.08rem;
+  margin-left: 12px;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(34,166,245,0.08);
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+}
+.lp-btn-signin:hover {
+  background: var(--primary-blue);
+  color: var(--white);
+}
+.lp-btn-home {
+  background: var(--light-blue);
+  color: var(--primary-blue) !important;
+  border-radius: 8px;
+  padding: 8px 28px;
+  font-weight: 700;
+  font-size: 1.08rem;
+  margin-left: 0;
+  margin-right: 12px;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px rgba(34,166,245,0.08);
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+}
+.lp-btn-home:hover {
+  background: var(--primary-blue);
+  color: var(--white) !important;
+}
+@media (max-width: 900px) {
+  .lp-navbar-inner { padding: 0 12px; }
+  .lp-navbar-links { gap: 18px; }
+}
+@media (max-width: 700px) {
+  .lp-navbar-inner { padding: 0 4px; }
+  .lp-navbar-links { gap: 8px; }
+  .lp-logo-text { font-size: 1.1rem; }
+  .lp-logo-icon { width: 24px; height: 24px; }
+}
+.lp-profile-circle {
+  width: 32px;
+  height: 32px;
+  background: var(--primary-blue);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(34,166,245,0.10);
+}
+.lp-profile-dropdown {
+  position: absolute;
+  right: 0;
+  top: 44px;
+  background: var(--white);
+  border: 1px solid var(--border-gray);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(34,166,245,0.12);
+  min-width: 260px;
+  z-index: 1000;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* --- Dropdown Header --- */
+.lp-profile-dropdown-header {
+  padding: 16px 20px 8px 20px;
+  border-bottom: 1px solid var(--border-gray);
+}
+.lp-profile-dropdown-signed {
+  color: var(--gray);
+  font-size: 15px;
+  margin-bottom: 2px;
+}
+.lp-profile-dropdown-email {
+  font-weight: 600;
+  font-size: 15px;
+  margin-top: 2px;
+  color: var(--dark-gray);
+  word-break: break-all;
+}
+
+/* --- Dropdown Items --- */
+.lp-profile-dropdown-list {
+  padding: 8px 0;
+}
+.lp-profile-dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  color: var(--dark-gray);
+  font-size: 1rem;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  text-decoration: none;
+  gap: 12px;
+}
+.lp-profile-dropdown-item svg {
+  flex-shrink: 0;
+  margin-right: 12px;
+}
+.lp-profile-dropdown-item:hover {
+  background: var(--light-blue);
+  color: var(--primary-blue);
+}
+.lp-profile-dropdown-item.logout {
+  color: #d32f2f;
+}
+.lp-profile-dropdown-item.logout:hover {
+  color: var(--white);
+  background: #d32f2f;
+}
+.lp-navbar-links-center {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 10;
+}
+.lp-navbar-link-btn {
+  background: none;
+  border: none;
+  color: var(--dark-gray);
+  font-size: 1.08rem;
+}
+.lp-navbar-link-btn:hover, .lp-navbar-link-btn.active {
+  color: var(--primary-blue);
+}
+.lp-navbar-links-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.lp-favorites-count {
+  background: #ef4444;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  margin-left: 8px;
+} 
